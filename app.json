@@ -20,6 +20,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
@@ -32,7 +33,33 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to take photos and record video.",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to record audio with video.",
+          "recordAudioAndroid": true,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to pick photos and videos from your library.",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to take photos and record video.",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to record audio with video."
+        }
+      ],
+      [
+        "expo-file-system",
+        {
+          "supportsOpeningDocumentsInPlace": true,
+          "enableFileSharing": true
+        }
+      ],
+      "expo-sharing",
+      "expo-video"
     ],
     "experiments": {
       "typedRoutes": true,
